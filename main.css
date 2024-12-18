@@ -499,6 +499,15 @@ dialog .pledge-input input {
     background-color: rgba(0, 0, 0, 0);
   }
 }
+.dialog-thank-you {
+  display: grid;
+  justify-items: center;
+  width: min(80vw, 400px);
+  text-align: center;
+  padding-block: 4rem;
+  background-color: darkgray;
+}
+
 @media screen and (min-width: 610px) {
   .section--stats .backings {
     padding-bottom: unset;
