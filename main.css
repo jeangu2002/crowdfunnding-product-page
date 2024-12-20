@@ -499,7 +499,7 @@ dialog .pledge-input input {
     background-color: rgba(0, 0, 0, 0);
   }
 }
-.dialog-thank-you {
+.dialog-thank-you[open] {
   display: grid;
   justify-items: center;
   width: min(80vw, 400px);
