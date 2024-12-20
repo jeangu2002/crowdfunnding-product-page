@@ -23,6 +23,7 @@
   --radius-xs: 0.6rem;
   --radius-xl: 3rem;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 /* UTILS */
@@ -500,12 +501,14 @@ dialog .pledge-input input {
   }
 }
 .dialog-thank-you[open] {
-  display: grid;
-  justify-items: center;
-  width: min(80vw, 400px);
-  text-align: center;
   padding-block: 4rem;
-  background-color: darkgray;
+  display: grid;
+}
+
+.dialog-thank-you {
+  width: min(80vw, 400px);
+  justify-items: center;
+  text-align: center;
 }
 
 @media screen and (min-width: 610px) {

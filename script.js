@@ -1,3 +1,6 @@
+const thankYouDialog = document.getElementById("thank-you");
+const sectionStats = document.querySelector(".section--stats");
+
 window.addEventListener("DOMContentLoaded", function () {
   const mobileMenuToggle = this.document.querySelector(".mobile-menu");
   const mobileNav = this.document.querySelector(".mobile--nav");
@@ -64,6 +67,17 @@ function animateCounter(el, target, speed = 200) {
       clearInterval(interval);
     }
   }, 1);
+
+  document.getElementById("close-thank-you-dialog").addEventListener("click", () => {
+    closeThankYouModal();
+    thankYouDialog.addEventListener(
+      "close",
+      () => {
+        sectionStats.scrollIntoView();
+      },
+      { once: true }
+    );
+  });
 }
 
 const openModal = function (dialog, selectedPledge) {
@@ -94,13 +108,11 @@ const openModal = function (dialog, selectedPledge) {
 };
 
 const openThankYouModal = function (delay = 0) {
-  const thankYouDialog = document.getElementById("thank-you");
-  debugger;
   setTimeout(() => thankYouDialog.showModal(), delay);
-  setTimeout(() => {
-    thankYouDialog.close();
-    enableVerticalScroll();
-  }, 4000);
+};
+
+const closeThankYouModal = function () {
+  thankYouDialog.close();
 };
 
 const disableVerticalScroll = function () {
